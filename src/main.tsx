@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css'; // Assuming you have a global stylesheet
 
 import Root from './routes/root';
 
