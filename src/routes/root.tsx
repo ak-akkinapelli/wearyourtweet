@@ -4,6 +4,8 @@ import Product from '../pages/Product';
 import Checkout from '../pages/Checkout';
 import styles from '../styles/nav.module.scss';
 import CartIcon from '../Utils/Cart';
+import Login from '../pages/Login';
+
 const App = () => {
   return (
     <Router>
@@ -15,7 +17,7 @@ const App = () => {
           <li>
             <ul>
               <li>
-                <Link to='/signin'>Login</Link>
+                <Link to='/login'>Login</Link>
               </li>
               <li>
                 <Link to='/contact'>Talk to us</Link>
@@ -37,6 +39,10 @@ const App = () => {
         <Route
           path='/product'
           element={<Product />}
+        />
+        <Route
+          path='/login'
+          element={<Login />}
         />
         <Route
           path='/checkout'
