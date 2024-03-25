@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
+import styles from '../styles/home.module.scss';
 const HomePage = () => {
   const navigate = useNavigate();
   const [inputValue, setInputValue] = useState('');
@@ -32,14 +32,23 @@ const HomePage = () => {
   };
 
   return (
-    <section>
-      <input
-        type='text'
-        placeholder='Your tweet link here'
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
-      />
-      <button onClick={handleInputSubmit}>Rumble</button>
+    <section className={styles.mainSection}>
+      <section className={styles.leftSection}>
+        <input
+          type='text'
+          placeholder='Your tweet link here'
+          value={inputValue}
+          className={styles.input}
+          onChange={(e) => setInputValue(e.target.value)}
+        />
+        <button onClick={handleInputSubmit}>Rumble</button>
+      </section>
+      <section className={styles.rightSection}>
+        <h1>3 steps to be unique</h1>
+        <p>Enter a tweet's URL</p>
+        <p>Select the size and color</p>
+        <p>Checkout and be patient for a week</p>
+      </section>
     </section>
   );
 };
